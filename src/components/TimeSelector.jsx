@@ -24,6 +24,11 @@ const TimeSelector = ({ onTimeSelect, selectedTime }) => {
 
   const timeSlots = generateTimeSlots();
 
+  const handleTimeClick = (time) => {
+    // Call the parent component's callback with the selected time
+    onTimeSelect(time);
+  };
+
   return (
     <div className="time-selector">
       <div className="time-selector-header">
@@ -35,7 +40,7 @@ const TimeSelector = ({ onTimeSelect, selectedTime }) => {
           <button
             key={time}
             className={`time-slot ${selectedTime === time ? "time-slot-selected" : ""}`}
-            onClick={() => onTimeSelect(time)}
+            onClick={() => handleTimeClick(time)}
           >
             {time}
           </button>
