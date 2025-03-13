@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,4 +99,33 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.reservation-calendar .rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+  background-color: #dbeafe;
+}
+
+.reservation-calendar .rdp-day_selected {
+  background-color: #3b82f6;
+}
+
+.reservation-calendar .rdp-day_today {
+  background-color: #93c5fd;
+}
+
+.reservation-calendar .rdp-head_cell {
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.reservation-calendar .rdp-caption {
+  font-weight: 600;
+  color: #111827;
+}
+
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
